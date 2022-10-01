@@ -22,7 +22,7 @@ tree = app_commands.CommandTree(aclient)
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'ola', description ='Olá!') 
 async def slash2(interaction: discord.Interaction):
-    await interaction.response.send_message(f"Olá, tudo bem?", ephemeral = True) 
+    await interaction.response.send_message(f"Olá tudo bem?", ephemeral = True) 
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'd20', description ='Rola um dado de 20 lados aleatorio') 
 async def slash2(interaction: discord.Interaction):
@@ -31,7 +31,7 @@ async def slash2(interaction: discord.Interaction):
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'regras', description ='Regras do servidor') 
 async def slash2(interaction: discord.Interaction):
-    await interaction.response.send_message(f"Para acessar as regras entre no link: https://www.google.com", ephemeral = True) 
+    await interaction.response.send_message(f"Para acessar as regras entre no link:\n https://www.google.com \n Para mais regras ou dúvidas, entre em contato com os administradores", ephemeral = True) 
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'caracoroa', description = 'Cara ou coroa')
 async def slash2(interection: discord.Integration):
