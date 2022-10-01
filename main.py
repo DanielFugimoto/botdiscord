@@ -3,7 +3,7 @@ import discord
 from discord import app_commands
 import random
 
-id_do_servidor =  1024709389225037936
+id_do_servidor =  #id do servidro
 
 class client(discord.Client):
     def __init__(self):
@@ -38,4 +38,4 @@ async def slash2(interection: discord.Integration):
     res = random.choice(["Cara", "Coroa"])
     await interection.response.send_message(f"Você tirou: {res}", ephemeral = False) 
 
-aclient.run('MTAyNDcxMDU4NTcwMDU4MTQxNg.GzqzsH.R7Ak51YtO1EP9ZJ6k_1YkgX0EE0I9ZU4_EqABI')
+aclient.run('#chave do bot')
