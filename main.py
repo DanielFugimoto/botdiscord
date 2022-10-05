@@ -21,21 +21,20 @@ aclient = client()
 tree = app_commands.CommandTree(aclient)
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'ola', description ='Olá!') 
-async def slash2(interaction: discord.Interaction):
+async def hello(interaction: discord.Interaction):
     await interaction.response.send_message(f"Olá tudo bem?", ephemeral = True) 
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'd20', description ='Rola um dado de 20 lados aleatorio') 
-async def slash2(interaction: discord.Interaction):
+async def dado(interaction: discord.Interaction):
     numero = random.randint(1,20)
     await interaction.response.send_message(f"Número {numero}", ephemeral = False) 
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'regras', description ='Regras do servidor') 
-async def slash2(interaction: discord.Interaction):
+async def regras(interaction: discord.Interaction):
     await interaction.response.send_message(f"Para acessar as regras entre no link:\n https://www.google.com \n Para mais regras ou dúvidas, entre em contato com os administradores", ephemeral = True) 
 
 @tree.command(guild = discord.Object(id = id_do_servidor), name = 'caracoroa', description = 'Cara ou coroa')
-async def slash2(interection: discord.Integration):
+async def jogo2(interection: discord.Integration):
     res = random.choice(["Cara", "Coroa"])
     await interection.response.send_message(f"Você tirou: {res}", ephemeral = False) 
-
 aclient.run('#chave do bot')
